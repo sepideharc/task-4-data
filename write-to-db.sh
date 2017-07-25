@@ -1,6 +1,6 @@
 #1/bin/bash
 
-# Run thi script after collecting data in data backup.csv
+# Run this script after collecting data in data backup.csv
 # Set MySQL credentials
 MYSQLUSER=root
 MYSQLPASS=root
@@ -24,5 +24,5 @@ echo "Data written successfully."
 # Dump current version of database into export file
 echo "Survey data dumped to file `date --iso-8601`-$MYDATABASE.sql"
 mysqldump -u"$MYSQLUSER" -p"$MYSQLPASS" $MYDATABASE > `date --iso-8601`-$MYDATABASE.sql
-# remove /var/lib/mysql-files/tmp.csv
+# remove /var/lib/mysql-files/temp.csv
 sudo rm /var/lib/mysql-files/temp.csv
